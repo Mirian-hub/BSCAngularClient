@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+}
+#_main-ag-grid {
+    height:77vh !important;
+}
+.btn  {
+    padding: 5px !important;
+    margin: 3px;
+}
+
+#listview-wrapper {
+    position: relative !important;
+}
+
+#spinner_wrapper {
+    display: block !important;
+    position:absolute !important; 
+    width: 100px !important;
+    height: 100px !important;
+    left: 47% !important;
+    top: 35% !important;
+    z-index: 1 !important;
+}
+#grid-global-search {
+    margin: 3px;
+}
+
+

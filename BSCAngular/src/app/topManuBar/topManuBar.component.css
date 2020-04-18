@@ -1,0 +1,52 @@
+.topManuChildContainer {
+    float: left;
+    border: none;
+    padding-left: 10px;
+    background-color: #2C3134;
+  }
+.toppManubarbtn {
+  border: 0px;
+  background-color: #2C3134;
+  color: white;
+  font-family: Arial;
+  border-radius: 3px;
+}
+.toppManubarbtn:hover {
+  color: #FF791A;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+#topManuParentContainer {
+  background-color: #2C3134; 
+  display: block;
+  padding:8px;
+}
+#topManuParentContainer::after {
+    content: " "; 
+    display: block;
+    clear: both;
+}
+.topManuChildContainer button {
+  font-size: 16px;
+}
+
+.fas {
+  color:white;
+  font-size: 15px;
+}
+.mat-tab-label {
+  background-color: green !important;
+  color: red;
+}
+.mat-tab-label-content {
+  background-color: red;
+}

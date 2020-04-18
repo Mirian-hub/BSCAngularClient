@@ -1,0 +1,48 @@
+<form class="form edit-form"> 
+    <div class="row" >
+      <div class="col col-lg-4">
+        <label class="edit-form-input-text-label col-sm-">თერმის კოდი</label>
+        <div class="edit-form-input-text col-sm-11">
+          <input type="text" class="form-control"  placeholder="" [value]="termCode">
+        </div>
+      </div>
+      <div class="col col-lg-8">
+        <label >თერმის ტიპი </label>
+        <select  class="form-control">
+          <option selected *ngFor="let item of termType"> {{item}} </option>
+        </select>
+      </div> 
+    </div>
+
+    <div class="row" >
+      <div class="col col-lg-4">
+        <label class="edit-form-input-text-label col-sm-">თერმის ფორმატი</label>
+        <div class="edit-form-input-text col-sm-11">
+          <input type="text" class="form-control"  placeholder="" [value]="termName">
+        </div>
+      </div>
+      <div class="col col-lg-8">
+        <label> თერმის სტატუსი </label>
+        <select  class="form-control">
+          <option   *ngFor="let item of termStatus"> {{item}} </option>
+        </select>
+      </div> 
+    </div>
+
+
+    <div class="row" >
+      <div class="col col-lg-4">
+        <label class="edit-form-input-text-label col-sm-">თერმის დასახელება</label>
+        <div class="edit-form-input-text col-sm-11">
+          <input type="text" class="form-control"  placeholder=""  [value]="termFormat">
+        </div>
+      </div>
+      <div class="col col-lg-8">
+        <label >თერმის ჯგუფი</label>
+        <select class="form-control" >
+          <option [value]="item.key" *ngFor="let item of groupDatasource">  {{item.key}}  -  {{item.name}} </option>
+          </select>
+      </div> 
+    </div>
+    <button type="submit" class="btn btn-success" style="margin: 15px 0px 15px 15px; float: right;"> შენახვა </button>
+  </form>

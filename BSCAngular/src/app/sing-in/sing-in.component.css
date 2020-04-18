@@ -1,0 +1,34 @@
+#loginContainer {
+    background-color: #444343;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.form-group {
+    padding: 15px 0px 010px 0px;
+    color: white;
+    font-weight: 800;
+}
+#passwordDiv {
+    padding-bottom: 50px;
+}
+#signinbtn {
+    background-color: #9ACD32;
+    color: white;
+    font-weight: bold;
+}
+.form-group input {
+    background-color: #9ACD32; 
+}
+.form-group input ::placeholder {
+    color: white !important;
+    opacity: 1;
+}
+::placeholder { 
+    color: white; 
+    font-weight: 400;
+} 
+:-ms-input-placeholder {
+    color: white; 
+    font-weight: 400; 
+}
+ 

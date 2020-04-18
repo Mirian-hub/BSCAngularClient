@@ -1,0 +1,11 @@
+<label> 
+Name : <input type="text" [formControl]="name"  >
+</label>
+<p> 
+    Value: {{name.value}}
+</p>
+
+ <app-profile-editor> </app-profile-editor>
+<br>
+ <input id="searchBox" (input)="onClickInput()" placeholder="Search Box"/> 
+ <button (click)="clickMe()">Click me </button>

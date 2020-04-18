@@ -1,0 +1,97 @@
+:host > .container-suplier {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+}
+:host > .mat-tab-group {
+    flex-direction: row;
+}
+:host > .mat-tab-header {
+    border-bottom: none;
+}
+:host > .mat-tab-header-pagination {
+    display: none !important;
+}
+:host > .mat-tab-labels {
+    flex-direction: column;
+}
+:host > .mat-ink-bar {
+    height: 100%;
+    left: 98% !important;
+}
+:host > .mat-tab-body-wrapper {
+    flex: 1 1 auto;
+}
+:target(.mat-tab-label-content) {
+    color: red !important;
+}
+.container-suplier {
+    position: relative;
+    width: 100%;
+    flex: 1 0 auto;
+    text-align: left;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+
+}
+.mat-tab-label {
+    color: red !important;
+}
+#content {
+    box-sizing: content-box;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+}
+#content {
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+#content::before, #main-content::before, #content::after, #main-content::after {
+    content: "";
+    display: table;
+}
+#content::after, #main-content::after {
+    clear: both;
+}
+#main-content {
+    width: 100% !important;
+}
+
+@media (min-width: 1200px) {
+    .container-suplier, .container-lg, .container-md, .container-sm, .container-xl {
+        width: 100% !important;
+    }
+}
+
+.mat-tab-body-wrapper ::after{
+    background-color: #EAFCC2 !important;
+}
+
+.mat_tab_content {
+    background-color:#f2f4eb;
+    box-shadow: hotpink;
+}
+.ag-theme-alpine {
+    @include ag-theme-alpine((
+        // use theme parameters where possible
+        alpine-active-color: deeppink
+    ));
+}
+
+:host ::ng-deep .mat-tab-label-content {
+font-style: italic;
+font-family: 'Times New Roman', Times, serif;
+color: rgb(23, 23, 49);
+}
+ 
+:host ::ng-deep .mat-tab-label {
+    height: 40px !important;
+    background-color: rgb(144, 192, 144) !important;
+    margin-bottom: 4px !important;
+    padding-bottom: 4px !important;
+
+}

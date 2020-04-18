@@ -1,0 +1,31 @@
+<input type="text" placeholder="filter" (keyup)= "searchinGrid()" [(ngModel)]="searchValue" id="grid-global-search"> 
+<div class="grid__wrapper" id="listview-wrapper">
+  <ag-grid-angular id="_main-ag-grid"         
+  style="width: 100%; height: 60vh; font-size:20px; font-family: Arial, Helvetica, sans-serif;" 
+  class="ag-theme-balham"
+  [rowData]="rowData | async" 
+  [animateRows]=true
+  rowSelection="multiple"
+  (gridReady)="onGridReady($event)"
+  pagination= true
+  #grid >
+</ag-grid-angular>
+  <div id="gridFooter"  > 
+    <button type="button" class="btn btn-success"  id="editBtn" (click)="onEditBtnClick()" > Edit </button>
+    <button type="button" class="btn btn-success"  id="deletBtn" > წაშლა </button>
+    <button type="button" class="btn btn-success"> დამატება </button>
+    <button type="button" class="btn btn-success"> ჯგუფის დამატება </button>
+    
+     <!-- <div *ngIf="data$ ==null" >
+      <div id="spinner_wrapper">xZxZx
+        <mat-spinner color="accent" > </mat-spinner> 
+      </div>
+      
+    </div>  -->
+  </div>
+<ng-template #loading ></ng-template>
+   
+        
+</div>
+
+

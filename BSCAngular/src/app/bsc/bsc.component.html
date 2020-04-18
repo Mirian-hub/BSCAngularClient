@@ -1,0 +1,413 @@
+
+<style>
+    #topButtonsGroup {
+        margin-bottom:5px;
+        margin-top: 10px;
+    }
+    .btn {
+        font-size: 20px;
+        background-color: #E6E6E6;
+        color: #37C5EF !important;
+        margin-left: 10px;
+    }
+    #searchForm {
+        width:20%;
+        float:left;
+        margin-bottom:0px !important;
+
+    }
+    .form-control {
+        display: block;
+        width: 10%;
+        float: left;
+        margin-left:10px;
+    }
+    #topfiltersNavBar {
+        padding-top:6px !important;
+        margin-bottom:10px; 
+    }
+    #sel1 {
+        font-size:15px;
+        width: 18% !important;
+    }
+    #searchForm >input {
+        font-size:15px;
+        width: 60%;
+    }
+    #searchForm > button {
+        font-size:15px;
+    }
+    #leftManuTable {
+        color: black;
+        width: 400px !important;
+        background-color: #E6EAEE;
+        display: block;
+        overflow: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        border: 1px solid #86D2EA;
+    }
+    #leftManuTable tr {
+        font-size:15px !important;
+        height:30px;
+    }
+    #leftManuTable tr:hover {
+        background-color: #ABABB2;
+        cursor:pointer;
+    }
+    #leftManuTable {
+       float:left;
+    }
+    #listViewTable {
+        float: left;
+    }
+    #listViewTable table tr td {
+        font-size: 18px;
+        padding: 10px;
+    }
+    #listViewTable table tr th {
+        font-size: 15px;
+        padding: 10px;
+    }
+    #listViewTable table tr {
+        background-color: #DBEEF2;
+        border-top: 1px solid black;
+        pad: 10px;
+    }
+
+    /*	
+	Side Navigation Menu V2, RWD
+	===================
+	License:
+	https://goo.gl/EaUPrt
+	===================
+	Author: @PableraShow
+
+ */
+
+
+    
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <nav class="navbar navbar-light bg-light justify-content-between" id="topfiltersNavBar">
+        <form class="form-inline" id="searchForm">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" >Search</button>
+        </form>
+    
+        <select class="form-control" id="sel1" name="sellist1">
+            <option> Selected Version One </option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <select class="form-control" id="sel1" name="sellist1">
+            <option>Sected  Two</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <select class="form-control" id="sel1" name="sellist1">
+            <option>Sected Version Three</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> 
+        <select class="form-control" id="sel1" name="sellist1">
+            <option>S V Four</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </nav>
+
+
+    <div id="topButtonsGroup">
+        <button class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <button class="btn"><i class="fa fa-font" aria-hidden="true"></i></button>
+        <button class="btn"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+        <button class="btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        <button class="btn">
+            <i class="fa fa-search-minus" aria-hidden="true"></i>
+        </button>
+        <button class="btn">
+            <i class="fa fa-search-plus" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+    <table class="table table-dark" id="leftManuTable">
+        <thead>
+            <tr>
+                <th scope="col">Group Number</th>
+                <th scope="col">Group name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacosssdddddsssss</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">12</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">13</th>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <div id="listViewTable">
+      <!-- follow me template -->
+      <div class="made-with-love">
+        
+        <table class="container">
+            <thead>
+                <tr>
+                    <th>Sites</th>
+                    <th>Views</th>
+                    <th>Clicks</th>
+                    <th>Average</th>
+                    <th>Sites</th>
+                    <th>Views</th>
+                    <th>Clicks</th>
+                    <th>Average</th>
+                    <th>Sites</th>
+                    <th>Views</th>
+                    <th>Clicks</th>
+                    <th>Average</th>
+                    <th>Views</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+                <td>Twitter</td>
+                <td>7326</td>
+                <td>10437</td>
+                <td>00:51:22</td>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+                <td>Twitter</td>
+                </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+                <td>Twitter</td>
+                <td>7326</td>
+                <td>10437</td>
+                <td>00:51:22</td>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+                <td>Twitter</td>
+                </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+                <td>Twitter</td>
+                <td>7326</td>
+                <td>10437</td>
+                <td>00:51:22</td>
+                <td>LinkedIn</td>
+                <td>3654</td>
+                <td>2961</td>
+                <td>00:12:10</td>
+                <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+            <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>Twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    

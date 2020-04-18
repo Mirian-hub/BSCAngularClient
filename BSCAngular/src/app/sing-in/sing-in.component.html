@@ -1,0 +1,18 @@
+
+<div class="container col-md-4 offset-md-4" id="loginContainer">
+    <div class="col-md-8 offset-md-2">
+        <form #form ='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)"> 
+           <div class="form-group">
+               <input [style.border-color]="isRegisterd ? 'green' : 'red'" class="form-control" #UserName= "ngModel" name="UserName" [(ngModel)]="formModel.UserName"  placeholder="სახელი ..." required >  
+           </div>
+            <div class="form-group" id="passwordDiv">
+                <input [style.border-color]="isRegisterd ? 'green' : 'red'" class="form-control" #UserName= "ngModel" name="Password" [(ngModel)]="formModel.Password" type="password" placeholder="პაროლი ..." required>  
+            </div>
+            <div class="foorm-row" >
+                <div class="form-group col-md-8 offset-md-2">
+                    <button type="submit" class="btn btn-lg btn-block" id="signinbtn" [disabled]="form.invalid"> Login</button>
+                </div>
+            </div>
+       </form> 
+    </div>    
+</div>      

@@ -1,0 +1,42 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label> 
+        First Name : 
+        <input type="text" formControlName="firstName"> 
+    </label>    
+
+    <label> 
+        Last Name : 
+        <input type="text" formControlName="lastName">  
+    </label>
+
+    <div formGroupName="address">
+        <h3> Address </h3>
+        <label> 
+         Street : 
+        <input type="text" formControlName="street" required> 
+        </label>
+
+        <label> 
+            City : 
+            <input type="text" formControlName="city"> 
+        </label>
+
+        
+        <label> 
+            State : 
+            <input type="text" formControlName="state"> 
+        </label>
+
+        <label> 
+            Zip : 
+            <input type="text" formControlName="zip"> 
+        </label>
+
+    </div>
+<div>
+    <input type="tex"  class="form-control" id="name" required #spy>
+    <br>
+    <div> {{spy.className}} </div>    
+</div>
+</form> 
+<button type="submit" [disabled]="!profileForm.valid"> Submit </button>

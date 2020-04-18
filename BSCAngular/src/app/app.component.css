@@ -1,0 +1,20 @@
+table, tr, td {
+    border: 1px solid black;
+  }
+
+  #tomManuBarComponent {
+    
+    display: block;
+}
+#tomManuBarComponent::after {
+    content: " "; 
+    display: block;
+    clear: both;
+}
+#coverImg {
+  display: block;
+  width: 600px;
+  height: 800px;
+}
+
+  

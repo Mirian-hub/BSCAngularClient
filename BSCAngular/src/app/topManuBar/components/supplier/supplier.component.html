@@ -1,0 +1,129 @@
+<div class="container-suplier" id="">
+  <div id="content">
+    <div id="main-content">
+      <mat-tab-group> 
+        <mat-tab label="მთავარი" >
+          <div class="mat_tab_content">    
+            <form  style="height: 80vh;"> 
+              <div class="row" >
+                <div class="col col-lg-4">
+                  <label class="edit-form-input-text-label col-sm-" id="term-code">თერმის კოდი</label>
+                  <div class="edit-form-input-text col-sm-11">
+                    <input type="text" class="form-control"  placeholder="" >
+                  </div>
+                </div>
+                <div class="col col-lg-8">
+                  <label >თერმის ტიპი </label>
+                  <select  class="form-control">
+                    <option > </option>
+                  </select>
+                </div> 
+              </div>
+          
+              <div class="row" >
+                <div class="col col-lg-4">
+                  <label class="edit-form-input-text-label col-sm-">თერმის ფორმატი</label>
+                  <div class="edit-form-input-text col-sm-11">
+                    <input type="text" class="form-control"  placeholder="" >
+                  </div>
+                </div>
+                <div class="col col-lg-8">
+                  <label> თერმის სტატუსი </label>
+                  <select  class="form-control">
+                    <option  >  </option>
+                  </select>
+                </div> 
+              </div>
+          
+          
+              <div class="row" >
+                <div class="col col-lg-4">
+                  <label class="edit-form-input-text-label col-sm-">თერმის დასახელება</label>
+                  <div class="edit-form-input-text col-sm-11">
+                    <input type="text" class="form-control"  placeholder=""  >
+                  </div>
+                </div>
+                <div class="col col-lg-8">
+                  <label >თერმის ჯგუფი</label>
+                  <select class="form-control" >
+                    <!-- <option [value]="item.key" *ngFor="let item of groupDatasource">  {{item.key}}  -  {{item.name}} </option> -->
+                    <option> </option>
+                    <option> </option>
+                    </select>
+                </div> 
+              </div>
+
+
+
+              <div class="row" >
+                <div class="col col-lg-4">
+                  <label class="edit-form-input-text-label col-sm-">თერმის კოდი</label>
+                  <div class="edit-form-input-text col-sm-11">
+                    <input type="text" class="form-control"  placeholder="" >
+                  </div>
+                </div>
+                <div class="col col-lg-8">
+                  <label >თერმის ტიპი </label>
+                  <select  class="form-control">
+                    <option > </option>
+                  </select>
+                </div> 
+              </div>
+          
+              <div class="row" >
+                <div class="col col-lg-4">
+                  <label class="edit-form-input-text-label col-sm-">თერმის ფორმატი</label>
+                  <div class="edit-form-input-text col-sm-11">
+                    <input type="text" class="form-control"  placeholder="" >
+                  </div>
+                </div>
+                <div class="col col-lg-8">
+                  <label> თერმის სტატუსი </label>
+                  <select  class="form-control">
+                    <option  >  </option>
+                  </select>
+                </div> 
+              </div>
+          
+          
+              <div class="row" >
+                <div class="col col-lg-4">
+                  <label class="edit-form-input-text-label col-sm-">თერმის დასახელება</label>
+                  <div class="edit-form-input-text col-sm-11">
+                    <input type="text" class="form-control"  placeholder=""  >
+                  </div>
+                </div>
+                <div class="col col-lg-8">
+                  <label >თერმის ჯგუფი</label>
+                  <select class="form-control" >
+                    <!-- <option [value]="item.key" *ngFor="let item of groupDatasource">  {{item.key}}  -  {{item.name}} </option> -->
+                    <option> </option>
+                    <option> </option>
+                    </select>
+                </div> 
+              </div>
+              <button type="submit" class="btn btn-success" style="margin: 15px 0px 15px 15px; float: right;"> შენახვა </button>
+            </form>
+            
+          </div>
+        </mat-tab>
+
+
+
+        <mat-tab label="შესყიდვის ხელშეკრულება" class="custom-mat-tab-label">
+         <form > 
+          <ag-grid-angular            
+            style="width: 100%; height: 60vh; font-size:20px; font-family: Arial, Helvetica, sans-serif;" 
+            class="ag-theme-balham"
+            [rowData]="rowData | async" 
+            
+            pagination= true
+            #grid
+            rowSelection="multiple">
+         </ag-grid-angular>
+         <button type="submit" class="btn btn-success" style="margin: 15px 0px 15px 15px; float: right;"> შენახვა </button>        </form>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

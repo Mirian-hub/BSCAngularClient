@@ -1,0 +1,199 @@
+<div id="topManuParentContainer">
+  <div class="mainContainer"> 
+  <div  class="topManuChildContainer"> 
+      <button mat-button [matMenuTriggerFor]="fileSL" class="toppManubarbtn" ><i class="fas fa-vector-square left" ></i> ფაილი  <i class="fas fa-caret-down" ></i>
+      </button>
+      <mat-menu #fileSL="matMenu">
+        <button mat-menu-item (click)="addNewTab($event, 1)" > დაკავშირება</button>
+        <button mat-menu-item (click)="addNewTab($event, 1)">კავშირის მოხსნა </button>
+        <button mat-menu-item (click)="addNewTab($event, 1)">შეწყვიტე </button>
+
+      </mat-menu>
+  </div>
+
+  <div  class="topManuChildContainer"> 
+    <button mat-button [matMenuTriggerFor]="dataSL" class="toppManubarbtn"  ><i class="fas fa-info-circle"></i> მონაცემები <i class="fas fa-caret-down" ></i>
+    </button>
+
+    <mat-menu #dataSL="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="dataTL" > მარაგი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> ჩემი კომპანია </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> დამკვეთი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> მდებარეობა </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> თანამშრომელი </button>
+      <button mat-menu-item (click)="addNewTab($event, 600101)"> მომწოდებელი </button>
+    </mat-menu>
+    
+    <mat-menu #dataTL="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> საწყობი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> ნედლეული </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> მზა ნაკეთობა </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> კომპლექტ ნაკეთობა </button>
+    </mat-menu>
+   </div>
+
+
+   <div  class="topManuChildContainer"> 
+    <button mat-button [matMenuTriggerFor]="transactSL" class="toppManubarbtn"  ><i class="fas fa-hand-holding-usd"></i> გატარება  <i class="fas fa-caret-down" ></i>
+    </button>
+
+    <mat-menu #transactSL="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="transactTLBue" > შესყიდვები</button>
+      <button mat-menu-item [matMenuTriggerFor]="transactTLSell" > გაყიდვები</button>
+      <button mat-menu-item [matMenuTriggerFor]="transactTLSupply" > მარაგები</button>
+      <button mat-menu-item [matMenuTriggerFor]="transactTLProduction" > წარმოება/კომლეტაცია</button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გატარეები </button>
+    </mat-menu>
+    
+    <mat-menu #transactTLBue="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> შესყიდვა </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> შესყიდვა/დაბრუნება </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> შესყიდვა/ჩანაცვლება - პირდაპირი </button>
+    </mat-menu>
+
+    <mat-menu #transactTLSell="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გაყიდვა </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> მენიუ </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გაყიდვის ფასები </button>
+    </mat-menu>
+
+    <mat-menu #transactTLSell="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გაყიდვა </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> მენიუ </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გაყიდვის ფასები </button>
+    </mat-menu>
+    <mat-menu #transactTLSupply="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გადაცემა </button>
+    </mat-menu>
+    
+    <mat-menu #transactTLProduction="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> წარმოება </button>
+    </mat-menu>
+   </div>
+
+
+   <div  class="topManuChildContainer"> 
+    <button mat-button [matMenuTriggerFor]="operateSL" class="toppManubarbtn" > <i class="fas fa-file-invoice"></i> დამუშავება  <i class="fas fa-caret-down" ></i>
+    </button>
+
+    <mat-menu #operateSL="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="transactTLBueSheet" >შესყიდვის უწყისი</button>
+      <button mat-menu-item [matMenuTriggerFor]="transactTLSellSheet" >გაყიდვის უწყისი</button>
+      <button mat-menu-item [matMenuTriggerFor]="transactTLSupplySheet" >მარაგების უწყისი</button>
+    </mat-menu>
+    
+    <mat-menu #transactTLBueSheet="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)">შესყიდვა/გაყოდვის ფასები </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> შესყიდვა/დაბრუნება </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)">შესყიდვა/ჩანაცვლება - პირდაპირი </button>
+    </mat-menu>
+
+    <mat-menu #transactTLSellSheet="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)">გაყიდვები ჯამური </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გაყიდვის ზედნადებები </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)">გაყიდვები ჯამური ნაკეთობებით </button>
+    </mat-menu>
+
+    <mat-menu #transactTLSupplySheet="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)">საქონლის ბარათი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> საქონლის ბალანსი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)">ნაშთი მომწოდებლის მიხედვით </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> გატარება </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)">საქონლის მოძრაობა </button>
+
+    </mat-menu>
+   </div>
+
+
+
+
+   <div  class="topManuChildContainer"> 
+    <button mat-button [matMenuTriggerFor]="POS_SL" class="toppManubarbtn"  > <i class="fas fa-desktop"></i> POS(ფრონტ ოფისი) <i class="fas fa-caret-down" ></i>
+    </button>
+
+    <mat-menu #POS_SL="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="POS_M_TL" > POS-M(მაღაზია)</button>
+      <button mat-menu-item [matMenuTriggerFor]="POS_R_TL" > POS-R(რესტორანი)</button>
+      <button mat-menu-item [matMenuTriggerFor]="POS_C_TL" > POS-C(კაფეტერია)</button>
+      <button mat-menu-item  >POS-AX(დღის დახურვა)</button>
+    </mat-menu>
+    
+    <mat-menu #POS_M_TL="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> POS-MS(გაყიდვა) </button>
+    </mat-menu>
+
+    <mat-menu #POS_R_TL="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> POS-RS(გაყიდვა) </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> POS-RS გადახდა </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> POS-RS შეკვეთა </button>
+    </mat-menu>
+
+    <mat-menu #POS_C_TL="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> POS-ჩS(გაყიდვა) </button>
+    </mat-menu>
+   </div>
+
+
+
+   <div  class="topManuChildContainer"> 
+    <button mat-button [matMenuTriggerFor]="systemSL" class="toppManubarbtn" ><i class="fas fa-sitemap"></i>  სისტემური <i class="fas fa-caret-down" ></i>
+    </button>
+
+    <mat-menu #systemSL="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="systemTL" > დიზაინი</button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"  > სამუშაო ადგილები</button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"  > უფლებები</button>
+      <button mat-menu-item  (click)="addNewTab($event, 1)" > შემოწმება</button>
+      <button mat-menu-item  (click)="addNewTab($event, 1)" > მომხმარებლები </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"  > მომხმარებელთა აქტივობა</button>
+
+    </mat-menu>
+    
+    <mat-menu #systemTL="matMenu">
+      <button mat-menu-item (click)="addNewTab($event, 1)"> მონაცემები </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> შეტყობინება </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> ოპერაცია </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> უწყისი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1)"> პარამეტრი </button>
+      <button mat-menu-item (click)="addNewTab($event, 1500)"> თერმი </button>
+    </mat-menu>
+
+   </div>
+
+   <div  class="topManuChildContainer"> 
+    <button mat-button  class="toppManubarbtn" (click)="addNewTab($event, 1)" ><i class="fas fa-sticky-note"></i> უწყისები  </button>
+   </div>
+   <div  class="topManuChildContainer"> 
+    <button mat-button  class="toppManubarbtn" (click)="addNewTab($event, 1)" > BSC.Solution.257  </button>
+   </div>
+
+
+
+
+
+ </div>
+</div>
+
+<div class="container-fluid" id="tabPanel_">  
+  <mat-tab-group
+     class="main-tab-group mt-2"
+     [selectedIndex]="selectedTab"
+     (selectedTabChange)="tabChanged($event)"
+   >
+     <mat-tab *ngFor="let tab of tabs; let tabIndex = index">
+       <ng-template mat-tab-label
+         >{{ tab.title }}
+         <i class="material-icons" (click)="removeTab(tabIndex)">
+           close 
+         </i>
+       </ng-template>
+ 
+       <div>
+         <app-tab-content [tab]="tab"> salskldjkhasldkljahsldklajkshdlaklsjkdhasljklh</app-tab-content>
+       </div>
+     </mat-tab>
+   </mat-tab-group>
+</div>
+ 
+
+
