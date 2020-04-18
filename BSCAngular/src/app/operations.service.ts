@@ -35,7 +35,8 @@ export class OperationsService {
       this.operationValues.forEach(element => {
         this.operationValuesFfin.push(element);
       });
-      return this.operationValuesFfin;
+      return this.operationValuesFfin; 
+      let tmp = 9;
      }
    }
 }
