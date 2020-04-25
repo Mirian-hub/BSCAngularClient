@@ -24,6 +24,37 @@ table {
 }
 #grid-global-search {
     margin: 3px;
+    border: none;
+    padding-left: 1px !important;
+    width: 20% !important;
+    height: 40px !important;
 }
+.ag-cell-label-container{
+    /*Necessary to allow for text to grow vertically*/
+    color: red;
+    background-color: red;
+    height: 100%;
+    padding: 5px !important;
+}
+#gridFooter  {
+    height: 50px;
+}
+#gridFooter input
+{
+    margin-left: 35px !important;
+    float: left;
+    outline: none;
+    padding: 10px !important;
+    border-radius:5px !important;
+}
+#gridFooter button {
+    float: left;
+    margin: 5px;
+    
+}
+#gridFooter input::placeholder {
+ padding: 5px !important; 
+}
+
 
 

@@ -36,9 +36,9 @@
     padding-top: 10px !important;
 
 }
-.mat-tab-label {
+/* .mat-tab-label {
     color: red !important;
-}
+} */
 #content {
     box-sizing: content-box;
     margin: 0 auto;
@@ -94,4 +94,43 @@ color: rgb(23, 23, 49);
     margin-bottom: 4px !important;
     padding-bottom: 4px !important;
 
+}
+:host(.ag-header-group-cell-label) {
+    background-color: #00e7b1;
+  }
+
+ :host(.ag-pivot-off .ag-header-group-cell){
+    font-size: 50px;
+    color: red;
+}
+
+.ag-header-cell-label .ag-header-cell-text {
+    color: yellow !important;
+}
+
+.ag-header-cell-text {
+    color: blue !important;
+}
+span {
+    color: aqua;
+}
+#supplier_Form {
+    position: relative;
+}
+#sqlQueryBtn {
+    position: absolute;
+    bottom: 30px;
+    left: 33px;
+}
+.mat-form-field {
+    padding: 5px !important;
+}
+.c-mat-form-filed-wrapper {
+    margin: 15px;
+    float: left;
+    padding: 5px;
+    background-color: #cfe8f7;
+}
+.c-mat-form-filed-wrapper .c_mat_label {
+    color:red;
 }

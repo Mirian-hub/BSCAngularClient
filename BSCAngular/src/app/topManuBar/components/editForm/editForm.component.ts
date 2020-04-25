@@ -7,6 +7,8 @@ import { defaultCipherList } from 'constants';
 import {GroupViewModel} from '../clientModels/groupTableModel';
 import {ListViewModel} from '../clientModels/listTableModel';
 import {AppService} from '../service/mainservice';
+import {TabService} from '../../tab.service';
+
 // tslint:disable-next-line: class-name
 @Component({
   // tslint:disable-next-line: component-selector
@@ -21,6 +23,7 @@ export class EditFormComponent implements OnInit {
   readonly BaseUrl = 'http://localhost:49946/api/';
   termCode: string; termName: string; termFormat: string;
   termType: string[];
+  private rowData;
   termStatus = ['Active - აქტიური', 'Passive - პასიური'];
   termGroup: string[];
   public groupDatasource: ListViewModel[];
@@ -28,8 +31,11 @@ export class EditFormComponent implements OnInit {
   public getGroupView(): Observable<ListViewModel[]> {
     return this.http.get<ListViewModel[]>(this.BaseUrl + 'listview' + '/1500');
    }
-  ngOnInit(): void {
+  ngOnInit() {
     // tslint:disable-next-line: max-line-length
+     this.http.get<ListViewModel[]>('http://localhost:49946/api/listview/'+ TabService.selectedOperationId+ '/0/' +localStorage.getItem('LVselectedRowId')).subscribe(
+       data => this.rowData = data
+     );
     // this.getGroupView().subscribe(data => this.groupDatasource = data.filter((element, i, arr) => arr.findIndex(t => t.id == element.id) === i));
     this.termCode = this.service.termCode;
     this.termName = this.service.termName;

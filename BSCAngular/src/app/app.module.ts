@@ -35,7 +35,12 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
 import {SupplierComponent} from './topManuBar/components/supplier/supplier.component';
 import {MatProgressSpinnerModule} from '@angular/material';
 import { AgGridModule } from 'ag-grid-angular';
-  
+import {AutocompleteSelectCellEditor} from 'ag-grid-autocomplete-editor';
+import {AutocompleteComponent} from './topManuBar/components/autocomplete/autocomplete.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +61,7 @@ import { AgGridModule } from 'ag-grid-angular';
     NameEditorComponent,
     ProfileEditorComponent,
     SupplierComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +87,10 @@ import { AgGridModule } from 'ag-grid-angular';
     IgxButtonGroupModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    MatDialogModule,
+    ModalModule.forRoot(),
+    MatTooltipModule
     ],
   providers: [],
   bootstrap: [

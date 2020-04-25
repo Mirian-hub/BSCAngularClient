@@ -44,15 +44,14 @@ export class TopManuBarComponent implements OnInit {
       switch (operationId) {
         case  600101: {component = SupplierComponent; } break;
         // tslint:disable-next-line: no-switch-case-fall-through
-        case 1500: {component = EditFormComponent; }
+        case 1500: {component = EditFormComponent; } break;
       }; 
     }
-    
-    if (!(btnClassName.includes('wrapper') || btnClassName.includes('trigger') )){
-      this.tabService.addTab(
+    // if (!(btnClassName.includes('wrapper') || btnClassName.includes('trigger') )){
+    this.tabService.addTab(
          new Tab(component, title + event.srcElement.innerText , { parent: 'AppComponent' })
       );
-    }
+    // }
 
   }
   removeTab(index: number): void {

@@ -26,5 +26,19 @@ body {
     font-weight: bold !important;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* .ag-header-cell-label .ag-header-cell-text {
+    color: red;
+  } */
 
-  
+#supplier_Form .ag-header-cell-label {
+    font-size: 13px;
+    color: rgb(246, 112, 112);
+}
+#supplier_Form .ag-header-group-text {
+    color: #464f37;
+}
+#supplier_Form .ag-header-cell-resize {
+    background-color:#BCD9BC;
+    border-radius: 5px;
+    width: 5px !important;
+}

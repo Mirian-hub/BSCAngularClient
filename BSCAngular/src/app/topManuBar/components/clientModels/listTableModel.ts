@@ -26,4 +26,6 @@ export interface ListViewModel {
     operationId: number;
     groupKey: string;
     groupName: string;
+    executedQuery: string;
+    defaultColNames: string[];
   }

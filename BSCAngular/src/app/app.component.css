@@ -16,5 +16,10 @@ table, tr, td {
   width: 600px;
   height: 800px;
 }
-
+:host(.ag-header-cell-label .ag-header-cell-text){
+  color: yellow !important;
+}
+.ag-header-row ag-header-row-column {
+  background-color: lightblue ;
+}
   
