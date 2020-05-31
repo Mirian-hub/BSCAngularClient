@@ -1,57 +1,163 @@
+<link rel="stylesheet"
+      href="https://unpkg.com/@ag-grid-community/all-modules@23.0.0/dist/styles/ag-grid.css">
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@ag-grid-community/all-modules@23.0.0/dist/styles/ag-theme-alpine.css">
+
 <div class="container-suplier" >
   <div id="content">
     <div id="main-content">
       <mat-tab-group> 
         <mat-tab label="მთავარი" >
+          <div *ngIf="spinnerOn"  id="spinnerWrapper">
+              <mat-spinner color="accent" id="spinner" > </mat-spinner> 
+          </div>
+          <div id="topBtnsWrapper">
+            <button  *ngIf="showSubmitBtn1" mat-raised-button matTooltip="Save Changes" type="submit" >
+              <i class="far fa-save"></i>
+            </button> 
+            <button    mat-raised-button matTooltip="Refresh Data" type="submit" >
+              <i class="fa fa-sync"></i>
+            </button> 
+            <button  *ngIf="showSubmitBtn1" mat-raised-button matTooltip="Executed Sql Query" (click)="openModal(template,1)" type="submit" >
+              <i class="fas fa-code"></i>
+            </button> 
+          </div>
+
+         
+
           <div class="mat_tab_content">  
             <form  [formGroup]="pageOneForm"> 
                 <!-- Value: {{pageOneForm.value | json}} -->
 
-              <div *ngFor="let item of tab1Names; let i=input" class="c-mat-form-filed-wrapper" > 
+              <div *ngFor="let item of tab1Names; let i=index" class="c-mat-form-filed-wrapper" > 
                 <mat-label class="c_mat_label">
                   {{item}}
                 </mat-label>
                 <mat-form-field >
                   <input matInput  formControlName={{item}}>
                 </mat-form-field>
-            </div>
-              <!-- <mat-label>Color</mat-label>
-              <mat-form-field>
-                <input matInput formControlName="Name">
-              </mat-form-field>
-              <mat-form-field>
-                <input matInput formControlName="Surname">
-              </mat-form-field>
-              <mat-form-field>
-                <input matInput formControlName="LastName">
-              </mat-form-field>
-              <mat-form-field>
-                <input matInput formControlName="PhoneNumber">
-              </mat-form-field> -->
+              </div>
+           
            </form>
+          
           </div>
+         
+          
         </mat-tab>
-
+        
         <mat-tab label="შესყიდვის ხელშეკრულება" class="custom-mat-tab-label" >      
-         <form id="supplier_Form">          
+         <form id="supplier_Form">       
+          <button mat-raised-button matTooltip="Add new Record" (click)="addNewRow()" style="margin:5px;">
+            <i class="fas fa-plus"></i>  
+          </button>   
+          <button  *ngIf="showSubmitBtn1" mat-raised-button matTooltip="Executed Sql Query" (click)="openModal(template,2)" >
+            <i class="fas fa-code"></i>
+          </button> 
+          <button    mat-raised-button matTooltip="Refresh Data" (click)="refresh()" >
+            <i class="fa fa-sync"></i>
+          </button> 
           <ag-grid-angular            
             style="width: 100%; height: 60vh; font-size:20px; font-family: Arial, Helvetica, sans-serif;" 
             class="ag-theme-balham"
             [rowData]="rowDataTab2 | async"
-            editType = fullRow
             pagination= true
             [singleClickEdit]="true"
             resizable = true  
             headerHeight = 15
             groupHeaderHeight = 40
+            suppressColumnVirtualisation = true
+            (firstDataRendered) = "setMultipleChoiceDefaults()"
+            cacheBlockSize = 
+            [paginationAutoPageSize]="true"
+            [pagination]="true"
             #grid
             rowSelection="multiple">
           </ag-grid-angular>
-          <!-- <button type="submit" class="btn btn-success" style="margin: 15px 0px 15px 15px; float: right;"> შენახვა </button>  -->
+          <button mat-raised-button matTooltip="Save Changes" type="submit">
+            <i class="far fa-save"></i>
+          </button>  
         </form>
         </mat-tab>
       </mat-tab-group>
 
     </div>
   </div>
+
+  <div id="sqlPopUpWindow">
+    <ng-template #template>
+     <div class="modal-header"> 
+      <h6> The Executed SQL Query: </h6>
+     </div>
+     <div class="modal-body"> 
+      {{sqlQuery}}
+     </div>
+     <div class="modal-footer"> 
+      <button type="button" class="btn btn-primary pull-right" (click)="modalref.hide()">Close </button>
+     </div>
+    </ng-template>
+  </div> 
+
+ <!-- Coplex   Column Tempalates  -->
+
+ <ng-template  #searchCell1 let-row>
+  <input matInput class="value11"  style="width: 80%; padding: 0px;" placeholder=""  (dblclick)="openModalEdit($event)" 
+  (keyup)= "search($event)" >
+  <button style="border: 1px transparent; border-radius: 2px; box-shadow: none; padding-left: 5px; background-color:
+              #BAE06C;" (click)="openModalEdit(1)"><i class="fas fa-search"></i>  </button>
+</ng-template>    
+<ng-template #textBoxCell11 let-row>
+  <div style="width: 100%;"><span style="color: black;" class="value12"> </span> </div>
+</ng-template>
+<ng-template #textBoxCell12 let-row>
+  <div style="width: 100%;"><span style="color: black;" class="value13">  </span> </div>
+</ng-template>
+
+
+  <ng-template #searchCell2 let-row>
+    <input class="value21" value={{searchCell2Source}} style="width: 80%; padding: 0px;" placeholder="" (dblclick)="openModalEdit($event)" (keyup)= "search($event)">
+    <button style="border: 1px transparent; border-radius: 2px; box-shadow: none; padding-left: 5px; background-color: #BAE06C;" (click)="openModalEdit(2)"><i class="fas fa-search"></i>  </button>
+  </ng-template>    
+  <ng-template #textBoxCell21 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value22">  </span> </div>
+  </ng-template>
+  <ng-template #textBoxCell22 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value23">    </span> </div>
+  </ng-template>
+
+  <ng-template #searchCell3 let-row>
+    <input class="value31"  value={{searchCell3Source}} style="width: 80%; padding: 0px;" placeholder="" (dblclick)="openModalEdit($event)" (keyup)= "search($event)">
+    <button style="border: 1px transparent; border-radius: 2px; box-shadow: none; padding-left: 5px; background-color: #BAE06C;" (click)="openModalEdit(3)"><i class="fas fa-search"></i>  </button>
+  </ng-template>    
+  <ng-template #textBoxCell31 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value32">  </span> </div>
+  </ng-template>
+  <ng-template #textBoxCell32 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value33">   </span> </div>
+  </ng-template>
+
+  <ng-template #searchCell4 let-row>
+    <input class="value41"  value={{searchCell4Source}} style="width: 80%; padding: 0px;" placeholder="" (dblclick)="openModalEdit($event)" (keyup)= "search($event)">
+    <button style="border: 1px transparent; border-radius: 2px; box-shadow: none; padding-left: 5px; background-color: #BAE06C;" (click)="openModalEdit(4)"><i class="fas fa-search"></i>  </button>
+  </ng-template>    
+  <ng-template #textBoxCell41 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value42"> </span> </div>
+  </ng-template>
+  <ng-template #textBoxCell42 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value43">    </span> </div>
+  </ng-template>
+
+  <ng-template #searchCell5 let-row>
+    <input  class="value51" value={{searchCell5Source}} style="width: 80%; padding: 0px;" placeholder="" (dblclick)="openModalEdit($event)" (keyup)= "search($event)">
+    <button style="border: 1px transparent; border-radius: 2px; box-shadow: none; padding-left: 5px; background-color: #BAE06C;" (click)="openModalEdit(5)"><i class="fas fa-search"></i>  </button>
+  </ng-template>    
+  <ng-template #textBoxCell51 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value52"> </span> </div>
+  </ng-template>
+  <ng-template #textBoxCell52 let-row>
+    <div style="width: 100%;"><span style="color: black;" class="value53">    </span> </div>
+  </ng-template>
+
+
+  
 </div>

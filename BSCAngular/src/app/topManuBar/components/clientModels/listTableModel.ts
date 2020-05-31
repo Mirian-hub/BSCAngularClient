@@ -1,5 +1,5 @@
 import {Type} from '@angular/core';
-
+import {ChildTepmlateModel} from './childTemplateModel';
 // tslint:disable-next-line: class-name
 export interface ListViewModel {
     col1: string;
@@ -28,4 +28,9 @@ export interface ListViewModel {
     groupName: string;
     executedQuery: string;
     defaultColNames: string[];
+    childTemplates: ChildTepmlateModel[];
+    columnIsEditable: boolean[];
+    colTemplateTypes: string[];
+    colIsSimple: boolean[];
+
   }

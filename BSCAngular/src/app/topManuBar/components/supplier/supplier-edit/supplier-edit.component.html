@@ -1,0 +1,23 @@
+<h4 mat-dialog-title> Select from below </h4>
+<input type="text" placeholder="Global Filter" (keyup)= "searchinGrid()" [(ngModel)]="searchValue" id="grid-global-search"> 
+<mat-dialog-content>
+    <ag-grid-angular id="edit-ag-grid"            
+    style="width: 100%; height: 60vh; font-size:20px; font-family: Arial, Helvetica, sans-serif;" 
+    class="ag-theme-balham"
+    [rowData]="gridData"
+    pagination = true
+    [singleClickEdit]="true"
+    resizable = true  
+    headerHeight = 15
+    groupHeaderHeight = 40
+    [rowSelection]="rowSelection"
+    #grid
+    rowSelection="multiple">
+    </ag-grid-angular>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click) ="select()"> Select </button>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+  <button mat-button [mat-dialog-close]="true"> Cancel </button>
+</mat-dialog-actions>
+

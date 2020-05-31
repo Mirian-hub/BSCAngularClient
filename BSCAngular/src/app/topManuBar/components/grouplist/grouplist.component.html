@@ -1,4 +1,7 @@
-<div id="gridFooter"  > 
+<div id="gridFooter"  >
+  
+
+
   <button mat-raised-button matTooltip="Edit Row" class="editBtn" (click)="onEditBtnClick()">
     <i class="fas fa-edit"></i>  
   </button>
@@ -30,7 +33,6 @@
   [rowData]="rowData | async" 
   [animateRows]=true
   rowSelection="multiple"
-  (gridReady)="onGridReady($event)"
   pagination= true
   editType = fullRow
   #grid >

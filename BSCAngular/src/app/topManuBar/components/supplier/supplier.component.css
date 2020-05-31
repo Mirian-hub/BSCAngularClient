@@ -126,11 +126,126 @@ span {
     padding: 5px !important;
 }
 .c-mat-form-filed-wrapper {
-    margin: 15px;
+    margin: 5px;
     float: left;
-    padding: 5px;
+    padding: 15px;
     background-color: #cfe8f7;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color:  rgb(96, 42, 150);
+    box-shadow: rgb(33, 33, 70);
 }
 .c-mat-form-filed-wrapper .c_mat_label {
-    color:red;
+    color:#2C3134;
+    font-style: italic;
 }
+#topBtnsWrapper button {
+    /* float: left; */
+    margin: 5px;
+}
+#spinner {
+    display: block !important;
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 45% !important;
+    padding-top: 100px !important;
+    position: fixed;
+}
+#spinnerWrapper {
+    height: 500px;
+    background-color: #EAFCC2;
+}
+.hyperLinkBtn {
+    font-size: 15px;
+    background-color:#a3d2ed; 
+    width: 100% !important;
+    background-color:#15AABF;
+    color: white;
+    border: 1px transparent;
+    border-radius: 3px;
+}
+.hyperLinkBtn:hover {
+    background-color: rgb(12, 129, 144);
+}
+
+.app-modal-window .modal-dialog {
+    width: 600px !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font: 16px Arial;  
+  }
+  
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }

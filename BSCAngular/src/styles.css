@@ -32,13 +32,20 @@ body {
 
 #supplier_Form .ag-header-cell-label {
     font-size: 13px;
-    color: rgb(246, 112, 112);
 }
 #supplier_Form .ag-header-group-text {
     color: #464f37;
 }
-#supplier_Form .ag-header-cell-resize {
-    background-color:#BCD9BC;
-    border-radius: 5px;
-    width: 5px !important;
-}
+ #supplier_Form {
+    font-size: 10px;
+} 
+.ag-theme-balham {
+      font-size: 15px !important;
+  }
+  .ag-header-group-text {
+      margin: auto !important;
+  }
+
+  #edit-ag-grid .ag-center-cols-container {
+      width: auto !important;
+  }

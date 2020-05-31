@@ -5,7 +5,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AppComponent } from './app.component';
 import { BSCComponent } from './bsc/bsc.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSliderModule } from '@angular/material/slider';
@@ -40,6 +39,12 @@ import {AutocompleteComponent} from './topManuBar/components/autocomplete/autoco
 import {MatDialogModule} from '@angular/material/dialog';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {TemplateRendererComponent} from './topManuBar/components/supplier/templateRendererComponent';
+import { SupplierEditComponent } from './topManuBar/components/supplier/supplier-edit/supplier-edit.component';
+import {MatTableModule} from '@angular/material/table';
+import {SelectionModel} from '@angular/cdk/collections';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
 
 @NgModule({
   declarations: [
@@ -61,7 +66,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     NameEditorComponent,
     ProfileEditorComponent,
     SupplierComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    TemplateRendererComponent,
+    SupplierEditComponent
   ],
   imports: [
     BrowserModule,
@@ -87,10 +94,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     IgxButtonGroupModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    AgGridModule.withComponents([]),
+    AgGridModule.withComponents([TemplateRendererComponent]),
     MatDialogModule,
     ModalModule.forRoot(),
-    MatTooltipModule
+    MatTooltipModule,
+    MatAutocompleteModule
     ],
   providers: [],
   bootstrap: [
@@ -102,7 +110,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     Comp2Component,
     EditFormComponent,
     SupplierComponent,
-
+    TemplateRendererComponent,
+    SupplierEditComponent
   ],
 })
 export class AppModule {
